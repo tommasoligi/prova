@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucco Tech</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/3a626c88-1343-4d2d-9eff-9889d9319895" alt="Lucco Tech Logo">
+      <span>Lucco Tech</span>
+    </div>
+    <nav>
+      <a href="#" id="nav-home" class="active">Home</a>
+      <a href="#prodotti" id="nav-prodotti">Prodotti</a>
+      <a href="#contatti" id="nav-contatti">Contatti</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <!-- Home Section -->
+    <section class="hero" id="home-section">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Soluzioni IT per privati e aziende</h1>
+          <p>
+            Computer & Workstation, Server, Notebook, Stampanti, Plotter e Fotocopiatrici,<br>
+            Vendita e assistenza, Noleggio hardware, Installazione firewall,<br>
+            Consulenza informatica, Realizzazione Siti Web su misura.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Prodotti/Servizi Section -->
+    <section class="services" id="prodotti-section">
+      <!-- Le card verranno generate da script.js -->
+    </section>
+    <!-- Contatti Section -->
+    <section class="contact-section" id="contatti-section">
+      <h2>Contattaci</h2>
+      <form id="contact-form" autocomplete="off">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="4" required></textarea>
+        <button type="submit">Invia</button>
+        <div class="success-message" id="success-message" style="display:none;">Messaggio inviato! Ti risponderemo al più presto.</div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Lucco Tech. Tutti i diritti riservati.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
