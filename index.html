@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rent Mario - Noleggio Van 9 Posti</title>
+  <title>Contatti - Rent Mario</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne:700,800|Azeret+Mono:400,700&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,110 +13,69 @@
     <nav>
       <a href="index.html" class="nav-link">Home</a>
       <a href="contatti.html" class="nav-link">Contatti</a>
+      <a href="recensioni.html" class="nav-link">Lascia una recensione</a>
     </nav>
   </header>
   <main>
-    <!-- HERO -->
-    <section class="hero section-animate">
+    <section class="contact-hero section-animate">
       <div class="hero-bg">
-        <img src="https://images.pexels.com/photos/193993/pexels-photo-193993.jpeg?auto=compress&w=1200&q=80" alt="Ford Custom 9 posti in strada" />
+        <img src="https://images.pexels.com/photos/193993/pexels-photo-193993.jpeg?auto=compress&w=1200&q=80" alt="Van in movimento" />
         <div class="hero-overlay"></div>
       </div>
       <div class="hero-content">
-        <h2>Il tuo viaggio, la nostra passione</h2>
+        <h2>Contattaci</h2>
         <p>
-          Noleggia un Ford Custom 9 posti senza conducente a Pesaro Urbino.<br>
-          Perfetto per famiglie, gruppi e trasferte di lavoro.<br>
-          <b>Comodità, sicurezza ed efficienza!</b>
+          Hai domande, vuoi un preventivo o vuoi prenotare subito il tuo van?<br>
+          Compila il modulo qui sotto o scrivici direttamente:<br>
+          <b><a href="mailto:info@rentmario.it">info@rentmario.it</a></b><br>
+          <b><a href="tel:+393289623852">+39 328 96 23 852</a></b>
         </p>
-        <a href="contatti.html" class="cta-btn">Prenota ora</a>
       </div>
     </section>
-
-    <!-- VAN SHOWCASE -->
-    <section class="van-showcase section-animate">
-      <div class="van-imgs">
-        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600&q=80" alt="Interni spaziosi Ford Custom" />
-        <img src="https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&w=600&q=80" alt="Ford Custom su strada" />
-        <img src="https://images.pexels.com/photos/193993/pexels-photo-193993.jpeg?auto=compress&w=600&q=80" alt="Dettaglio comfort Ford Custom" />
-      </div>
-      <div class="van-desc">
-        <h3>Ford Custom 9 Posti</h3>
-        <ul>
-          <li>🚐 Spazio per 9 persone e bagagli</li>
-          <li>🛡️ Assicurazione completa inclusa</li>
-          <li>📍 Ritiro e consegna a Pesaro Urbino</li>
-          <li>⏱️ Noleggio flessibile: breve o lungo termine</li>
-        </ul>
+    <section class="contact-section section-animate">
+      <form id="contact-form">
+        <label>Nome</label>
+        <input type="text" name="nome" required />
+        <label>Email</label>
+        <input type="email" name="email" required />
+        <label>Telefono</label>
+        <input type="tel" name="telefono" />
+        <label>Oggetto</label>
+        <input type="text" name="oggetto" />
+        <label>Messaggio</label>
+        <textarea name="messaggio" required rows="5"></textarea>
+        <button type="submit" class="cta-btn">Invia richiesta</button>
+      </form>
+      <div id="contact-success" class="contact-success"></div>
+    </section>
+    <!-- SLIDER RECENSIONI -->
+    <section class="reviews-row section-animate">
+      <div class="reviews-slider">
+        <h3>Cosa dicono i nostri clienti</h3>
+        <div class="slider-container">
+          <div id="reviews-list" class="reviews-list">
+            <!-- Le recensioni appariranno qui -->
+          </div>
+        </div>
+        <div class="review-link">
+          <a href="recensioni.html" class="cta-btn">Lascia una recensione</a>
+        </div>
       </div>
     </section>
-<section class="features-dynamic section-animate">
-  <h3>Perché scegliere <span class="highlight">Rent Mario</span>?</h3>
-  <div class="features-cards">
-    <div class="feature-card">
-      <!-- Soldi -->
-      <img src="https://cdn-icons-png.flaticon.com/512/12740/12740855.png" alt="Prezzi chiari" />
-      <span>💶 Prezzi chiari e competitivi</span>
-    </div>
-    <div class="feature-card">
-      <!-- Cornetta telefono -->
-      <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Assistenza" />
-      <span>📞 Assistenza sempre disponibile</span>
-    </div>
-    <div class="feature-card">
-      <!-- Bolle di sapone -->
-      <img src="https://cdn-icons-png.flaticon.com/512/2052/2052442.png" alt="Veicolo igienizzato" />
-      <span>🧽 Veicolo igienizzato ad ogni noleggio</span>
-    </div>
-    <div class="feature-card">
-      <!-- Prenotazione semplice e veloce -->
-      <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Prenotazione facile" />
-      <span>📝 Prenotazione semplice e veloce</span>
-    </div>
-    <div class="feature-card">
-      <!-- Chiavi auto -->
-      <img src="https://cdn-icons-png.flaticon.com/512/12607/12607702.png" alt="Consegna e ritiro rapidi" />
-      <span>⚡ Consegna e ritiro rapidi</span>
-    </div>
-  </div>
-</section>
-    <!-- CTA -->
-    <section class="cta-section section-animate">
-      <h3>Pronto a partire?</h3>
-      <p>Contattaci ora e scopri le offerte dedicate a te!</p>
-      <a href="contatti.html" class="cta-btn">Richiedi informazioni</a>
-    </section>
-    <!-- RECENSIONI E FORM SIDE BY SIDE -->
-<section class="reviews-row section-animate">
-  <div class="review-section">
-    <h3>Lascia una recensione</h3>
-    <form id="review-form">
-      <label>Nome</label>
-      <input type="text" name="reviewer" required />
-      <label>Recensione</label>
-      <textarea name="review" required rows="3"></textarea>
-      <button type="submit" class="cta-btn">Invia recensione</button>
-    </form>
-    <div id="review-success" class="contact-success"></div>
-  </div>
-  <div class="reviews-slider">
-    <h3>Cosa dicono i nostri clienti</h3>
-    <div class="slider-container">
-      <div id="reviews-list" class="reviews-list">
-        <!-- Le recensioni appariranno qui -->
-      </div>
-    </div>
-  </div>
-</section>
   </main>
- <footer class="footer">
-  <div>
-    <b>Contatti:</b> <a href="tel:+393289623852">+39 328 96 23 852</a> | <a href="mailto:info@rentmario.it">info@rentmario.it</a>
-  </div>
-  <div>
-    © <span id="year"></span> Rent Mario - Noleggio van senza conducente
-  </div>
-</footer>
+  <footer class="footer">
+    <div>
+      <b>Contatti:</b> <a href="tel:+393289623852">+39 328 96 23 852</a> | <a href="mailto:info@rentmario.it">info@rentmario.it</a>
+    </div>
+    <div>
+      <a href="index.html">Home</a> | 
+      <a href="contatti.html">Contatti</a> | 
+      <a href="recensioni.html">Lascia una recensione</a>
+    </div>
+    <div>
+      © <span id="year"></span> Rent Mario - Noleggio van senza conducente
+    </div>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>
