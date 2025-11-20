@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Syne', 'Azeret+Mono', sans-serif;
+  font-family: 'Syne', 'Azeret Mono', sans-serif;
   background: #FFDA00;
   color: #000;
 }
@@ -92,46 +92,40 @@ main {
   background: #000;
   color: #FFDA00;
 }
-.van-showcase {
+.van-card {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
-  margin: 3rem auto 2rem auto;
-  max-width: 1100px;
+  max-width: 900px;
+  margin: 2.5rem auto 2rem auto;
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem;
 }
-.van-imgs {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.van-imgs img {
+.van-card-img img {
   width: 220px;
   height: 140px;
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
 }
-.van-desc {
-  background: #fff;
-  color: #000;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 2rem 2.5rem;
-  min-width: 320px;
+.van-card-desc {
+  flex: 1;
 }
-.van-desc h3 {
+.van-card-desc h3 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
-.van-desc ul {
+.van-card-desc ul {
   list-style: none;
   padding: 0;
   font-size: 1.1rem;
+  margin-top: 1rem;
 }
-.van-desc li {
-  margin-bottom: 0.7rem;
+.van-card-desc li {
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -146,11 +140,21 @@ main {
   font-weight: 800;
   margin-bottom: 2rem;
 }
-.features-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
+.features-grid-2x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem 1.5rem;
+  justify-items: center;
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+}
+@media (max-width: 900px) {
+  .features-grid-2x3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 1.2rem;
+  }
 }
 .feature-card {
   background: #fff;
@@ -167,10 +171,10 @@ main {
   align-items: center;
 }
 .feature-card img {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   margin-bottom: 0.7rem;
-  filter: grayscale(0.2);
+  filter: grayscale(0.1);
 }
 .feature-card:hover {
   transform: translateY(-8px) scale(1.04) rotate(-1deg);
@@ -190,196 +194,6 @@ main {
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-}
-footer {
-  background: #000;
-  color: #FFDA00;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
-.section-animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
-}
-.section-animate.visible {
-  opacity: 1;
-  transform: none;
-}
-@media (max-width: 900px) {
-  .header {
-    flex-direction: column;
-    padding: 1rem 0.5rem;
-  }
-  .hero-content {
-    max-width: 100%;
-    margin: 0 1rem;
-    text-align: center;
-  }
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-  .van-showcase {
-    flex-direction: column;
-    gap: 1rem;
-    margin: 2rem 0 1rem 0;
-  }
-  .van-imgs {
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  .van-imgs img {
-    width: 90px;
-    height: 60px;
-  }
-  .van-desc {
-    padding: 1rem;
-    min-width: unset;
-    font-size: 1rem;
-  }
-  .features-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  .feature-card {
-    width: 90vw;
-    max-width: 350px;
-    padding: 1rem 0.5rem;
-  }
-  .cta-section {
-    padding: 2rem 0 1rem 0;
-  }
-}
-.contact-section {
-  max-width: 500px;
-  margin: 2rem auto;
-  background: #fff;
-  color: #000;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-.contact-section form label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-}
-.contact-section input,
-.contact-section textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-.contact-section button {
-  margin-top: 1.5rem;
-  width: 100%;
-}
-.contact-success {
-  display: none;
-  margin-top: 1.5rem;
-  background: #FFDA00;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  text-align: center;
-  font-weight: bold;
-}
-.review-section {
-  max-width: 500px;
-  margin: 2rem auto;
-  background: #fff;
-  color: #000;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.review-section form label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
-}
-.review-section input,
-.review-section textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-.review-section button {
-  margin-top: 1.5rem;
-  width: 100%;
-}
-.reviews-slider {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: #fff;
-  color: #000;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  text-align: center;
-}
-.slider-container {
-  overflow: hidden;
-  position: relative;
-  height: 120px;
-}
-.reviews-list {
-  display: flex;
-  transition: transform 0.7s cubic-bezier(.4,0,.2,1);
-  will-change: transform;
-  height: 120px;
-}
-.review-item {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  font-size: 1.1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.review-author {
-  font-weight: bold;
-  margin-top: 0.5rem;
-  color: #FFDA00;
-  background: #000;
-  padding: 0.2em 0.7em;
-  border-radius: 0.5em;
-}
-.footer {
-  background: #000;
-  color: #FFDA00;
-  text-align: center;
-  padding: 1.2rem 0 0.5rem 0;
-  font-size: 1rem;
-}
-.footer a {
-  color: #FFDA00;
-  text-decoration: underline;
-}
-@media (max-width: 700px) {
-  .review-section, .reviews-slider {
-    padding: 1rem;
-  }
-  .slider-container, .reviews-list, .review-item {
-    height: auto;
-    min-height: 120px;
-  }
 }
 .reviews-row {
   display: flex;
@@ -429,15 +243,100 @@ footer {
   padding: 0.2em 0.7em;
   border-radius: 0.5em;
 }
+.footer {
+  background: #000;
+  color: #FFDA00;
+  text-align: center;
+  padding: 1.2rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+.footer a {
+  color: #FFDA00;
+  text-decoration: underline;
+}
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.section-animate.visible {
+  opacity: 1;
+  transform: none;
+}
+.contact-section {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.contact-section form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.contact-section button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.contact-success {
+  display: none;
+  margin-top: 1.5rem;
+  background: #FFDA00;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
 @media (max-width: 900px) {
-  .reviews-row {
+  .header {
     flex-direction: column;
-    gap: 1.5rem;
-    align-items: stretch;
+    padding: 1rem 0.5rem;
+  }
+  .hero-content {
+    max-width: 100%;
+    margin: 0 1rem;
+    text-align: center;
+  }
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .van-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .van-card-img img {
+    width: 100%;
+    height: 120px;
+  }
+  .features-grid-2x3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 1.2rem;
   }
   .review-section, .reviews-slider {
     padding: 1rem;
     max-width: 100%;
+  }
+  .reviews-row {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
   }
   .slider-container, .reviews-list, .review-item {
     height: auto;
