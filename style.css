@@ -630,13 +630,31 @@ main {
   background: none;
   border: none;
   color: #c00;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-top: 0.5em;
   cursor: pointer;
   transition: color 0.2s;
+  padding: 0.3em 0.7em;
+  border-radius: 0.4em;
+  display: inline-block;
 }
+
+.delete-review-btn:active,
+.delete-review-btn:focus {
+  background: #ffeaea;
+  outline: none;
+}
+
 .delete-review-btn:hover {
   color: #ff0000;
+}
+
+@media (max-width: 700px) {
+  .delete-review-btn {
+    font-size: 1.5em;
+    margin-top: 0.7em;
+    padding: 0.5em 1em;
+  }
 }
 .back-to-top {
   position: fixed;
