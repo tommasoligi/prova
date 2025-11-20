@@ -454,12 +454,48 @@ main {
   background: #000;
   color: #FFDA00;
   text-align: center;
-  padding: 1.2rem 0 0.5rem 0;
+  padding: 2rem 0 1rem 0;
   font-size: 1rem;
+  margin-top: 2rem;
 }
+
+.footer > div {
+  margin-bottom: 0.8em;
+  line-height: 1.8;
+  display: block;
+}
+
 .footer a {
   color: #FFDA00;
   text-decoration: underline;
+  margin: 0 0.7em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #fff200;
+  text-decoration: none;
+}
+
+.footer > div:last-child {
+  margin-bottom: 0;
+  font-size: 0.95em;
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    font-size: 0.98rem;
+    padding: 1.2rem 0 0.7rem 0;
+  }
+  .footer a {
+    display: inline-block;
+    margin: 0.3em 0.5em;
+  }
+  .footer > div {
+    margin-bottom: 0.6em;
+  }
 }
 .section-animate {
   opacity: 0;
