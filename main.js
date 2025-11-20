@@ -110,3 +110,15 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextReview, 3500);
   }
 });
+// Bottone "torna su"
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+backToTop.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
