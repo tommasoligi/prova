@@ -292,3 +292,92 @@ footer {
   text-align: center;
   font-weight: bold;
 }
+.review-section {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.review-section form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.review-section input,
+.review-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.review-section button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.reviews-slider {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  color: #000;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+}
+.reviews-list {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.4,0,.2,1);
+  will-change: transform;
+  height: 120px;
+}
+.review-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.review-author {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #FFDA00;
+  background: #000;
+  padding: 0.2em 0.7em;
+  border-radius: 0.5em;
+}
+.footer {
+  background: #000;
+  color: #FFDA00;
+  text-align: center;
+  padding: 1.2rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+.footer a {
+  color: #FFDA00;
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .review-section, .reviews-slider {
+    padding: 1rem;
+  }
+  .slider-container, .reviews-list, .review-item {
+    height: auto;
+    min-height: 120px;
+  }
+}
