@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contatti - Rent Mario</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Syne:700,800|Azeret+Mono:400,700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Rent Mario</h1>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="contatti.html" class="nav-link">Contatti</a>
+    </nav>
+  </header>
+  <main>
+    <section class="contact-section">
+      <h2>Contattaci</h2>
+      <form id="contact-form">
+        <label>Nome</label>
+        <input type="text" name="nome" required />
+        <label>Email</label>
+        <input type="email" name="email" required />
+        <label>Telefono</label>
+        <input type="tel" name="telefono" />
+        <label>Oggetto</label>
+        <input type="text" name="oggetto" />
+        <label>Messaggio</label>
+        <textarea name="messaggio" required rows="5"></textarea>
+        <button type="submit" class="cta-btn">Invia richiesta</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    © <span id="year"></span> Rent Mario - Noleggio furgone senza conducente
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
