@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Aggiorna anno nel footer
   document.querySelectorAll("#year").forEach(el => {
     el.textContent = new Date().getFullYear();
   });
