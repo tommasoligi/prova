@@ -33,7 +33,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .h1-title {
   font-size: 3.2rem;
-  text-shadow: 2px 2px 0 #FFDA00, 4px 4px 10px #00000022;
 }
 .features-title, .cta-title, .reviews-title {
   font-size: 2rem;
