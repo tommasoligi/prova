@@ -56,18 +56,23 @@ main {
   top: 0; left: 0;
   z-index: 1;
 }
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 2rem;
-}
 .hero-content h2 {
-  font-size: 2.7rem;
-  font-weight: 800;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
   color: #000;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #222;
+  letter-spacing: 0.5px;
 }
 .hero-content .highlight {
   color: #FFDA00;
