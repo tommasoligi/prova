@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showReviews();
     setInterval(nextReview, 3500);
   }
-});
+
   // Bottone "torna su"
   const backToTop = document.getElementById("backToTop");
   if (backToTop) {
